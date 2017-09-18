@@ -1,0 +1,20 @@
+package fr.kevin.lambda;
+
+import fr.kevin.lambda.entity.User;
+
+public class Main {
+
+	public static void main(String[] args) {
+		User[] users = new User[1];
+		users.getClass().getDeclaredField("length").setAccessible(true);
+		for (int i = 0; i < 10; i++) {
+			try {
+				
+			} catch (NoSuchFieldException | SecurityException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

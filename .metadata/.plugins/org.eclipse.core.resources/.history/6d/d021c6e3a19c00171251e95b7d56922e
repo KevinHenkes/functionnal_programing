@@ -1,0 +1,43 @@
+package fr.kevin.lambda;
+
+import java.lang.reflect.Field;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import fr.kevin.lambda.entity.User;
+
+public class Main {
+	private static final Logger LOGGER = Logger.getGlobal();
+
+	public static void main(String[] args) {
+		final User[] array = new User[1];
+
+		try {
+			
+			
+			Integer nbItems = 1;
+			Integer indexItem = 0;
+			
+			while (true) {
+				
+			}
+		} catch (IllegalArgumentException | NoSuchFieldException | SecurityException e) {
+			LOGGER.log(Level.SEVERE, e.getMessage());
+		}
+
+	}
+	
+	private static Integer resizeArray(Object[] array, Integer length) {
+		try {
+			final Field arrayLength = array.getClass().getDeclaredField("length");
+			arrayLength.setAccessible(true);
+			arrayLength.setInt(array, i);
+		} catch (NoSuchFieldException | SecurityException e) {
+			e.printStackTrace();
+		}
+	
+		
+		return 1;
+	}
+
+}

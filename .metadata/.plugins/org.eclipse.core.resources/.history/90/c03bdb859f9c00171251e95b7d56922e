@@ -1,0 +1,21 @@
+package fr.kevin.lambda;
+
+import java.lang.reflect.Field;
+
+import fr.kevin.lambda.entity.User;
+
+public class Main {
+
+	public static void main(String[] args) {
+		User[] array = new User[1];
+		Field arrayLength = array.getClass().getDeclaredField("length");
+		
+		arrayLength.setAccessible(true);
+		
+		for (int i = 0; i < 10; i++) {
+			users.length++;
+		}
+		
+	}
+
+}

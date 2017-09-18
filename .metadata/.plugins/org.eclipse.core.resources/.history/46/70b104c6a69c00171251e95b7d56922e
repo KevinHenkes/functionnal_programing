@@ -1,0 +1,46 @@
+package fr.kevin.lambda;
+
+import java.awt.List;
+import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import fr.kevin.lambda.entity.User;
+
+public class Main {
+	private static final Logger LOGGER = Logger.getGlobal();
+
+	public static void main(String[] args) {
+		Collection<User> users;
+		Collection<Collection<User>> users = new List(Arrays.asList(new User("test", "test", 20)));
+};
+//
+//		Integer nbItems = 1;
+//		Integer indexItem = 0;
+//
+//		while (indexItem++ < 10) {
+//			resizeArray(array, nbItems++);
+//			
+//		}
+		
+		Map<User> = users.stream().
+	}
+
+	private static Integer resizeArray(Object[] array, Integer length) {
+		try {
+			final Field arrayLength = array.getClass().getDeclaredField("length");
+			arrayLength.setAccessible(true);
+			arrayLength.setInt(array, length);
+
+			return 0;
+		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+			LOGGER.log(Level.SEVERE, e.getMessage());
+
+			return 1;
+		}
+		
+	}
+
+}

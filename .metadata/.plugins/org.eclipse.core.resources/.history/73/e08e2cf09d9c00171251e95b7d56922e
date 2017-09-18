@@ -1,0 +1,8 @@
+package fr.kevin.lambda.entity;
+
+public class User {
+	private String lastname;
+	private Integer age;
+	private String firstname;
+	
+}
