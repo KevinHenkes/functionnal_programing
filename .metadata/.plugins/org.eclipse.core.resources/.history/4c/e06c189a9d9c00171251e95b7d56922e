@@ -1,7 +1,0 @@
-package fr.kevin.lambda;
-
-import java.lang.reflect.Array;
-
-public class Main {
-	String[] array = new String[]("test","lol");
-}
